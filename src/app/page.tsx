@@ -99,7 +99,7 @@ export default function Home() {
           animationDuration={1.5}
           label="Star"
           size={'sm'}
-          repoUrl="https://github.com/toukoum/portfolio"
+          repoUrl="https://github.com/MeYousafbukhari"
         />
       </div>
 
@@ -129,23 +129,19 @@ export default function Home() {
         </div>
 
         <h2 className="text-secondary-foreground mt-1 text-xl font-semibold md:text-2xl">
-          Hey, I'm Raphael 👋
+          Hey, I'm Yousaf Bukhari 👋
         </h2>
         <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
-          AI portfolio
+          Your AI-Powered <br>Digital Mentor
         </h1>
       </motion.div>
 
-      {/* centre memoji */}
       <div className="relative z-10 h-52 w-48 overflow-hidden sm:h-72 sm:w-72">
-        <Image
-          src="/landing-memojis.png"
-          alt="Hero memoji"
-          width={2000}
-          height={2000}
-          priority
-          className="translate-y-14 scale-[2] object-cover"
-        />
+        <script
+          type="module"
+          src="https://unpkg.com/@splinetool/viewer@1.10.32/build/spline-viewer.js"
+        ></script>
+        <spline-viewer url="https://prod.spline.design/Mwlg7aL2ixcIPW-l/scene.splinecode"></spline-viewer>
       </div>
 
       {/* input + quick buttons */}
