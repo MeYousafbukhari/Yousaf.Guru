@@ -1,70 +1,46 @@
 ![image](assets/readme-photo.png)
- 
-# World's first AI portfolio 🤖✨  
 
-**Static portfolios are dead.**  
-So I built [toukoum.fr](https://toukoum.fr).
-
-Instead of making you scroll endlessly, my portfolio adapts to *you*.  
-Ask a question — my AI avatar replies instantly.
-
-## 👇 What can you ask?
-
-- 🧠 **Tech recruiter?** Ask about my stack & results  
-- 💻 **Dev?** Dive into my code & mindset  
-- 🧑‍🤝‍🧑 **Friend or family?** See what I’ve been working on  
+# 👋 I'm Yousaf Bukhari — Your AI-Powered Digital Mentor 🤖✨  
+*Educator. Strategist. Visionary.*
 
 ---
 
-This is not a portfolio.  
-It’s a **conversation tailored to your curiosity**.
+**Traditional portfolios? Outdated.**  
+So I built [yousaf.guru](https://yousaf.guru) — the **world’s first AI-powered personal brand experience**.
 
-➡️ **Try it now:** [https://toukoum.fr](https://toukoum.fr)  
-*What will you ask?*
+Instead of forcing you to scroll endlessly, my AI avatar interacts with you.  
+Ask anything — and get real answers, instantly.
 
-## 🚀 How to run
+---
 
-Want to run this project locally? Here's what you need:
+## 👇 What can you ask my AI?
+
+- 🎯 **Agency or client?** Ask about SEO, marketing strategies & case studies  
+- 📚 **Student or learner?** Explore my teachings, tools & digital courses  
+- 💬 **Curious friend or follower?** See what I'm building and planning next  
+
+---
+
+This isn’t just a portfolio.  
+It’s **me — in AI form**, ready for a conversation.  
+It’s branded. It’s alive. It’s personal.
+
+➡️ **Try it now:** [https://yousaf.guru](https://yousaf.guru)  
+*Go ahead — ask me anything.*
+
+---
+
+## 🚀 Want to build your own AI-powered profile?
 
 ### Prerequisites
-- **Node.js** (v18 or higher)
+- **Node.js** (v18 or newer)
 - **pnpm** package manager
-- **OpenAI API token** (for AI chat functionality)
-- **GitHub token** (for GitHub integration features)
+- **OpenAI API Key** (for AI chat)
+- **GitHub Token** (optional, for project repo integration)
 
-### Setup
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd portfolio
-   ```
+### Setup Instructions
 
-2. **Install dependencies**
-   ```bash
-   pnpm install
-   ```
-
-3. **Environment variables**
-   Create a `.env` file in the root directory:
-   ```env
-   OPENAI_API_KEY=your_openai_api_key_here
-   GITHUB_TOKEN=your_github_token_here
-   ```
-
-4. **Run the development server**
-   ```bash
-   pnpm dev
-   ```
-
-5. **Open your browser**
-   Navigate to `http://localhost:3000`
-
-### Getting your **tokens**
-- **OpenAI API Key**: Get it from [platform.openai.com](https://platform.openai.com/api-keys)
-- **GitHub Token**: Generate one at [github.com/settings/tokens](https://github.com/settings/personal-access-tokens) with repo access
-
-
-
-#### 🔖 Tags
-
-`#AIPortfolio` `#InnovationInTech` `#DigitalResume` `#JobSearch` `#TechInnovation` `#WebDevelopment` `#FutureTech`
+```bash
+git clone <your-repo-url>
+cd yousaf-portfolio
+pnpm install
