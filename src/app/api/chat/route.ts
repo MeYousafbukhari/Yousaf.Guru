@@ -1,4 +1,4 @@
-import { openai } from '@ai-sdk/openai';
+import { createOpenAI } from '@ai-sdk/openai';
 import { streamText } from 'ai';
 import { SYSTEM_PROMPT } from './prompt';
 import { getContact } from './tools/getContact';
@@ -9,6 +9,12 @@ import { getProjects } from './tools/getProjects';
 import { getResume } from './tools/getResume';
 import { getSkills } from './tools/getSkills';
 import { getSports } from './tools/getSport';
+
+// Configure OpenRouter
+const openrouter = createOpenAI({
+  baseURL: 'https://openrouter.ai/api/v1',
+  apiKey: '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',
+});
 
 export const maxDuration = 30;
 
@@ -45,7 +51,7 @@ export async function POST(req: Request) {
     };
 
     const result = streamText({
-      model: openai('gpt-4o-mini'),
+      model: openrouter('deepseek/deepseek-chat'),
       messages,
       toolCallStreaming: true,
       tools,
