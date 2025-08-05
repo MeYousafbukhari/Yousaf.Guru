@@ -10,10 +10,10 @@ import { getResume } from './tools/getResume';
 import { getSkills } from './tools/getSkills';
 import { getSports } from './tools/getSport';
 
-// Configure OpenRouter
-const openrouter = createOpenAI({
-  baseURL: 'https://openrouter.ai/api/v1',
-  apiKey: process.env.OPENROUTER_API_KEY!,
+// Configure Together.ai
+const together = createOpenAI({
+  baseURL: 'https://api.together.xyz/v1',
+  apiKey: process.env.TOGETHER_API_KEY!,
 });
 
 export const maxDuration = 30;
@@ -51,11 +51,11 @@ export async function POST(req: Request) {
     };
 
     const result = streamText({
-      model: openrouter('deepseek/deepseek-chat'),
+      model: together('mistralai/Mixtral-8x7B-Instruct-v0.1'),
       messages,
       toolCallStreaming: true,
       tools,
-      maxSteps: 2,
+      maxSteps: 10, // increased for more complete responses
     });
 
     return result.toDataStreamResponse({
