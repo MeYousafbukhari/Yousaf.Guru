@@ -24,12 +24,23 @@ function errorHandler(error: unknown) {
     return 'Unknown error';
   }
   if (typeof error === 'string') {
+    // Check for Together.ai rate limit error
+    if (error.includes('rate limit') && error.includes('together')) {
+      return '⏳ You are sending messages too fast! Please slow down and wait a minute before trying again.';
+    }
     return error;
   }
   if (error instanceof Error) {
+    if (error.message.includes('rate limit') && error.message.includes('together')) {
+      return '⏳ You are sending messages too fast! Please slow down and wait a minute before trying again.';
+    }
     return error.message;
   }
-  return JSON.stringify(error);
+  const str = JSON.stringify(error);
+  if (str.includes('rate limit') && str.includes('together')) {
+    return '⏳ You are sending messages too fast! Please slow down and wait a minute before trying again.';
+  }
+  return str;
 }
 
 export async function POST(req: Request) {
@@ -51,11 +62,11 @@ export async function POST(req: Request) {
     };
 
     const result = streamText({
-      model: together('mistralai/Mixtral-8x7B-Instruct-v0.1'),
+      model: together('meta-llama/Llama-Vision-Free'),
       messages,
       toolCallStreaming: true,
       tools,
-      maxSteps: 10, // increased for more complete responses
+      maxSteps: 2,
     });
 
     return result.toDataStreamResponse({
