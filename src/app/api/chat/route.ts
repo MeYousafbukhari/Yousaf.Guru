@@ -13,7 +13,7 @@ import { getSports } from './tools/getSport';
 // Configure OpenRouter
 const openrouter = createOpenAI({
   baseURL: 'https://openrouter.ai/api/v1',
-  apiKey: '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',
+  apiKey: process.env.OPENROUTER_API_KEY!,
 });
 
 export const maxDuration = 30;

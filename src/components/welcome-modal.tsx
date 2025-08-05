@@ -23,24 +23,6 @@ export default function WelcomeModal({ trigger }: WelcomeModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter(); // Initialisation du router avec useRouter
 
-  // Default trigger is the logo
-  const defaultTrigger = (
-    <Button
-      variant="ghost"
-      className="h-auto w-auto cursor-pointer rounded-2xl bg-white/30 p-3 shadow-lg backdrop-blur-lg hover:bg-white/60 focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
-      onClick={() => setIsOpen(true)}
-    >
-      <Image
-        src="/logo-yousaf.svg"
-        width={100}
-        height={100}
-        alt="Logo"
-        className="w-6 md:w-8"
-      />
-      <span className="sr-only">About Yousaf Bukhari</span>
-    </Button>
-  );
-
   // Fonction qui utilise window.location pour forcer un rechargement complet
   const handleContactMe = () => {
     setIsOpen(false);
@@ -50,12 +32,6 @@ export default function WelcomeModal({ trigger }: WelcomeModalProps) {
 
   return (
     <>
-      {/* Use custom trigger if provided, otherwise use default */}
-      {trigger ? (
-        <div onClick={() => setIsOpen(true)}>{trigger}</div>
-      ) : (
-        defaultTrigger
-      )}
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="bg-background z-52 max-h-[85vh] overflow-auto rounded-2xl border-none p-4 py-6 shadow-xl sm:max-w-[85vw] md:max-w-[80vw] lg:max-w-[1000px]">

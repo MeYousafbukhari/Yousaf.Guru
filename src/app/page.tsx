@@ -16,6 +16,7 @@ import {
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
+import Spline from '@splinetool/react-spline';
 
 /* ---------- quick-question data ---------- */
 const questions = {
@@ -49,7 +50,7 @@ export default function Home() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: 'ease', duration: 0.8 },
+      transition: { duration: 0.8 },
     },
   };
   const bottomElementVariants = {
@@ -57,7 +58,7 @@ export default function Home() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: 'ease', duration: 0.8, delay: 0.2 },
+      transition: { duration: 0.8, delay: 0.2 },
     },
   };
 
@@ -80,6 +81,24 @@ export default function Home() {
     document.head.appendChild(linkMp4);
   }, []);
 
+  // Spline viewer integration
+  const splineRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!splineRef.current) return;
+    if (!document.querySelector('script[data-spline-viewer]')) {
+      const script = document.createElement('script');
+      script.type = 'module';
+      script.src = 'https://unpkg.com/@splinetool/viewer@1.10.32/build/spline-viewer.js';
+      script.setAttribute('data-spline-viewer', 'true');
+      document.body.appendChild(script);
+    }
+    if (splineRef.current && !splineRef.current.querySelector('spline-viewer')) {
+      const splineEl = document.createElement('spline-viewer');
+      splineEl.setAttribute('url', 'https://prod.spline.design/TXFBOFS0y-v2w7et/scene.splinecode');
+      splineRef.current.appendChild(splineEl);
+    }
+  }, []);
+
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pb-10 md:pb-20">
       {/* big blurred footer word */}
@@ -88,33 +107,8 @@ export default function Home() {
           className="hidden bg-gradient-to-b from-neutral-500/10 to-neutral-500/0 bg-clip-text text-[10rem] leading-none font-black text-transparent select-none sm:block lg:text-[16rem]"
           style={{ marginBottom: '-2.5rem' }}
         >
-          Yousaf Bukhari
+          YOUSAF
         </div>
-      </div>
-
-      {/* GitHub button */}
-      <div className="absolute top-6 right-8 z-20">
-        <GithubButton
-          //targetStars={68}
-          animationDuration={1.5}
-          label="Star"
-          size={'sm'}
-          repoUrl="https://github.com/MeYousafbukhari"
-        />
-      </div>
-
-      <div className="absolute top-6 left-6 z-20">
-        <button
-          onClick={() => goToChat('Are you looking for an internship?')}
-          className="relative flex cursor-pointer items-center gap-2 rounded-full border bg-white/30 px-4 py-1.5 text-sm font-medium text-black shadow-md backdrop-blur-lg transition hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
-        >
-          {/* Green pulse dot */}
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
-          </span>
-          Looking for a talent?
-        </button>
       </div>
 
       {/* header */}
@@ -136,12 +130,12 @@ export default function Home() {
         </h1>
       </motion.div>
 
-      <div className="relative z-10 h-52 w-48 overflow-hidden sm:h-72 sm:w-72">
-        <script
-          type="module"
-          src="https://unpkg.com/@splinetool/viewer@1.10.32/build/spline-viewer.js"
-        ></script>
-        <spline-viewer url="https://prod.spline.design/Mwlg7aL2ixcIPW-l/scene.splinecode"></spline-viewer>
+     {/* Spline 3D Scene */}
+      <div className="relative z-10 h-36 w-32 sm:h-52 sm:w-48 md:h-64 md:w-60 flex justify-center items-center">
+        <Spline 
+          scene="https://prod.spline.design/TXFBOFS0y-v2w7et/scene.splinecode"
+          style={{ width: '100%', height: '100%' }}
+        />
       </div>
 
       {/* input + quick buttons */}
