@@ -13,10 +13,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Toukoum Portfolio",
+  title: "Yousaf Bukhari Portfolio",
   description: "Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience",
   keywords: [
-    "Toukoum", 
+    "Yousaf Bukhari", 
     "Portfolio", 
     "Developer", 
     "AI", 
@@ -29,24 +29,24 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Toukoum",
-      url: "https://toukoum.fr",
+      name: "Yousaf Bukhari ",
+      url: "https://yousaf.guru",
     },
   ],
-  creator: "Toukoum",
+  creator: "Yousaf Bukhari",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://toukoum.fr",
-    title: "Toukoum Portfolio",
+    url: "https://yousaf.guru",
+    title: "Yousaf Bukhari Portfolio",
     description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
-    siteName: "Toukoum Portfolio",
+    siteName: "Yousaf Bukhari Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Toukoum Portfolio",
+    title: "Yousaf Bukhari Portfolio",
     description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
-    creator: "@toukoum",
+    creator: "@yousafbukri",
   },
   icons: {
     icon: [

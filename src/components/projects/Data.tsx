@@ -86,11 +86,11 @@ const PROJECT_CONTENT = [
     links: [
       {
         name: 'website',
-        url: 'https://rrate.app',
+        url: 'https://yousaf.guru',
       },
       {
         name: 'github',
-        url: 'https://github.com/toukoum/Rrate',
+        url: 'https://github.com/imyousafbukhari/Rrate',
       },
     ],
     images: [
@@ -127,7 +127,7 @@ const PROJECT_CONTENT = [
       },
       {
         name: 'github',
-        url: 'https://github.com/toukoum/DEFAI',
+        url: 'https://github.com/imyousafbukhari/DEFAI',
       },
       {
         name: 'LinkedIn',
@@ -135,7 +135,7 @@ const PROJECT_CONTENT = [
       },
       {
         name: 'Youtube Video',
-        url: 'https://www.youtube.com/watch?v=N9O7los4-ng&t=34s&ab_channel=Toukoum',
+        url: 'https://www.youtube.com/yousafbukhari',
       }
     ],
     images: [
@@ -195,7 +195,7 @@ const PROJECT_CONTENT = [
     links: [
       {
         name: 'GitHub',
-        url: 'https://github.com/toukoum/datai',
+        url: 'https://github.com/imyousafbukhari/datai',
       },
       {
         name: 'Youtube Video Demo',
@@ -230,7 +230,7 @@ const PROJECT_CONTENT = [
     links: [
       {
         name: 'GitHub',
-        url: 'https://github.com/toukoum/Transcendance',
+        url: 'https://github.com/imyousafbukhari/Transcendance',
       },
     ],
     images: [
@@ -270,7 +270,7 @@ const PROJECT_CONTENT = [
     links: [
       {
         name: 'GitHub',
-        url: 'https://github.com/toukoum/Michelle-42',
+        url: 'https://github.com/imyousafbukhari/Michelle-42',
       },
     ],
     images: [
@@ -293,7 +293,7 @@ const PROJECT_CONTENT = [
       },
       {
         name: 'GitHub',
-        url: 'https://github.com/toukoum/YouBot',
+        url: 'https://github.com/imyousafbukhari/YouBot',
       }
     ],
     images: [
@@ -316,11 +316,11 @@ const PROJECT_CONTENT = [
     links: [
       {
         name: 'Website',
-        url: 'https://toukoum.github.io/oldPortfolio/',
+        url: 'https://imyousafbukhari.github.io/oldPortfolio/',
       },
       {
         name: 'GitHub',
-        url: 'https://github.com/toukoum/portfolio',
+        url: 'https://github.com/imyousafbukhari/portfolio',
       },
     ],
     images: [

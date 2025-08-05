@@ -17,23 +17,23 @@ export function Contact() {
       },
       {
         name: 'Youtube',
-        url: 'https://www.youtube.com/@toukoum',
+        url: 'https://www.youtube.com/@yousafbukhari',
       },
       {
         name: 'Instagram',
-        url: 'https://www.instagram.com/raphael.giraud/',
+        url: 'https://www.instagram.com/yousafbukri',
       },
       {
         name: 'Discord',
-        url: 'https://discord.com/users/toukoum',
+        url: 'https://discord.com/users/yousafbukhari',
       },
       {
         name: 'Github',
-        url: 'https://github.com/toukoum',
+        url: 'https://github.com/imyousafbukhari  ',
       },
       {
         name: 'X',
-        url: 'https://x.com/toukoumcode',
+        url: 'https://x.com/yousafbukri',
       },
     ],
   };
